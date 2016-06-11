@@ -152,7 +152,9 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 86237304}
+  - 95: {fileID: 86237305}
   - 114: {fileID: 86237303}
+  - 114: {fileID: 86237306}
   m_Layer: 0
   m_Name: character
   m_TagString: Untagged
@@ -395,6 +397,41 @@ Transform:
   - {fileID: 751920518}
   m_Father: {fileID: 0}
   m_RootOrder: 1
+--- !u!95 &86237305
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 86237302}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e3e37bde8bb540648b3cbc9b9ed8ba0a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &86237306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 86237302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88077d4ac1cdb5544b3b7a7d5de0a99b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rendHead: {fileID: 35387064}
+  rendBody: {fileID: 35387064}
+  rendLegs: {fileID: 786197956}
+  rendHandL: {fileID: 1006358869}
+  rendHandR: {fileID: 566342987}
+  rendFace: {fileID: 347393893}
+  rendHair: {fileID: 751920519}
 --- !u!1 &347393891
 GameObject:
   m_ObjectHideFlags: 0
@@ -496,7 +533,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 4
-  m_Sprite: {fileID: 21300002, guid: 85652a5974c867941adb1fcb5d5646e5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d1a97a59f6d4df54db4f8c6a23cf1521, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -507,7 +544,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 480343779}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []

@@ -30,7 +30,15 @@ public class PlayerController : MonoBehaviour {
 		// Create a vector based on the player's input
 		moveDirection = new Vector2(InputController.h, InputController.v);
 		moveDirection = Vector2.ClampMagnitude(moveDirection, 1.0f);
-
 		rb.velocity = moveDirection * moveSpeed;
+	}
+
+	void OnCollisionEnter2D(Collision2D col)
+	{
+		if (col.gameObject.CompareTag("npc"))
+		{
+			print ("collision");
+		}
+
 	}
 }

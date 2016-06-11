@@ -1,0 +1,218 @@
+fileFormatVersion: 2
+guid: d1a97a59f6d4df54db4f8c6a23cf1521
+timeCreated: 1465675438
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: SSwalkDown_0
+    21300002: SSwalkDown_1
+    21300004: SSwalkDown_2
+    21300006: SSwalkDown_3
+    21300008: SSwalkDown_4
+    21300010: SSwalkDown_5
+    21300012: SSwalkDown_6
+    21300014: SSwalkDown_7
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: SSwalkDown_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 150
+        width: 300
+        height: 150
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 127, y: 8.5}
+        - {x: 127, y: 86.5}
+        - {x: -127, y: 86.5}
+        - {x: -127, y: 10.5}
+        - {x: -108, y: -11.5}
+        - {x: -54, y: -11.5}
+        - {x: -36, y: 12.5}
+        - {x: 25, y: -11.5}
+        - {x: 111, y: -11.5}
+    - name: SSwalkDown_1
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 150
+        width: 300
+        height: 150
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -127, y: 86.5}
+        - {x: -127, y: 3.5}
+        - {x: -66, y: -19.5}
+        - {x: 120, y: -19.5}
+        - {x: 127, y: -16.5}
+        - {x: 127, y: 86.5}
+    - name: SSwalkDown_2
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 150
+        width: 300
+        height: 150
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -127, y: 86.5}
+        - {x: -127, y: 16.5}
+        - {x: -122, y: 3.5}
+        - {x: -68, y: -6.5}
+        - {x: -38, y: 18.5}
+        - {x: -33, y: 33.5}
+        - {x: 14, y: -11.5}
+        - {x: 43, y: -28.5}
+        - {x: 110, y: -28.5}
+        - {x: 129, y: -17.5}
+        - {x: 129, y: 67.5}
+        - {x: 128, y: 86.5}
+    - name: SSwalkDown_3
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 150
+        width: 300
+        height: 150
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -127, y: 86.5}
+        - {x: -127, y: 3.5}
+        - {x: -66, y: -19.5}
+        - {x: 120, y: -19.5}
+        - {x: 127, y: -16.5}
+        - {x: 127, y: 86.5}
+    - name: SSwalkDown_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 300
+        height: 150
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 127, y: 8.5}
+        - {x: 127, y: 86.5}
+        - {x: -127, y: 86.5}
+        - {x: -127, y: 10.5}
+        - {x: -108, y: -11.5}
+        - {x: -54, y: -11.5}
+        - {x: -36, y: 12.5}
+        - {x: 25, y: -11.5}
+        - {x: 111, y: -11.5}
+    - name: SSwalkDown_5
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 0
+        width: 300
+        height: 150
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -127, y: 86.5}
+        - {x: -127, y: -12.5}
+        - {x: -121, y: -19.5}
+        - {x: 114, y: -19.5}
+        - {x: 127, y: 6.5}
+        - {x: 127, y: 86.5}
+    - name: SSwalkDown_6
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 0
+        width: 300
+        height: 150
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 127, y: 23.5}
+        - {x: 127, y: 86.5}
+        - {x: -129, y: 86.5}
+        - {x: -129, y: -11.5}
+        - {x: -121, y: -20.5}
+        - {x: -99, y: -28.5}
+        - {x: -50, y: -28.5}
+        - {x: -21, y: -18.5}
+        - {x: -23, y: 12.5}
+        - {x: 56, y: -8.5}
+        - {x: 107, y: -4.5}
+    - name: SSwalkDown_7
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 0
+        width: 300
+        height: 150
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -127, y: 86.5}
+        - {x: -127, y: -12.5}
+        - {x: -121, y: -19.5}
+        - {x: 114, y: -19.5}
+        - {x: 127, y: 6.5}
+        - {x: 127, y: 86.5}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -17,13 +17,19 @@ public class characterVisualAdapter : MonoBehaviour {
     private SpriteRenderer rendFace;
     [SerializeField]
     private SpriteRenderer rendHair;
+    [SerializeField]
+    private SpriteRenderer rendHairBack;
 
     private int diffLeft;
     private int diffRight;
 
+    private int faceDiff;
+    private int hairBackDiff;
+
     void Start () {
         diffLeft = 2;
         diffRight = 2;
+        facingForward();
     }
 
     public void leftHandFront() {
@@ -36,11 +42,22 @@ public class characterVisualAdapter : MonoBehaviour {
         diffRight = -2;
     }
 
+    public void facingForward() {
+        faceDiff = 2;
+        hairBackDiff = 0;
+    }
+
+    public void facingBack() {
+        faceDiff = 0;
+        hairBackDiff = 2;
+    }
+
     void newLayers() {
         rendBody.sortingOrder = (Mathf.RoundToInt(transform.position.y * -100));
+        rendHairBack.sortingOrder = (Mathf.RoundToInt(transform.position.y * -100)) + hairBackDiff;
         rendLegs.sortingOrder = (Mathf.RoundToInt(transform.position.y * -100)) + 1;
         rendHead.sortingOrder = (Mathf.RoundToInt(transform.position.y * -100)) + 1;
-        rendFace.sortingOrder = (Mathf.RoundToInt(transform.position.y * -100)) + 2;
+        rendFace.sortingOrder = (Mathf.RoundToInt(transform.position.y * -100)) + faceDiff;
         rendHair.sortingOrder = (Mathf.RoundToInt(transform.position.y * -100)) + 3;
         rendHandL.sortingOrder = (Mathf.RoundToInt(transform.position.y * -100)) + diffLeft;
         rendHandR.sortingOrder = (Mathf.RoundToInt(transform.position.y * -100)) + diffRight;

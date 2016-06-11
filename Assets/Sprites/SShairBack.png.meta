@@ -1,0 +1,100 @@
+fileFormatVersion: 2
+guid: 69f3ffc5b13feb24682eb41574bdbde6
+timeCreated: 1465688382
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: SShairBack_0
+    21300002: SShairBack_1
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 300
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: SShairBack_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 260
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 100, y: 74}
+        - {x: -109, y: 74}
+        - {x: -126, y: 62}
+        - {x: -128, y: 54}
+        - {x: -128, y: 0}
+        - {x: -85, y: -49}
+        - {x: 85, y: -49}
+        - {x: 128, y: 5}
+        - {x: 128, y: 48}
+        - {x: 127, y: 55}
+    - name: SShairBack_1
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 0
+        width: 260
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -63, y: 74}
+        - {x: -103, y: 67}
+        - {x: -103, y: 13}
+        - {x: -102, y: 2}
+        - {x: -79, y: -49}
+        - {x: 91, y: -49}
+        - {x: 103, y: 14}
+        - {x: 103, y: 72}
+        - {x: 85, y: 74}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

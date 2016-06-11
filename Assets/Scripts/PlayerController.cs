@@ -1,17 +1,31 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour {
 
+	//---------------------------------------------------------------------------------------------------------------------------
+	// Public Variables
+	//---------------------------------------------------------------------------------------------------------------------------
+
 	public float moveSpeed = 10.0f;
+	public Image IconContainer;
+
+	//---------------------------------------------------------------------------------------------------------------------------
+	// Private Variables
+	//---------------------------------------------------------------------------------------------------------------------------
 
 	private Vector2 moveDirection = Vector3.zero;
 	private Rigidbody2D rb;
+
+	private Dictionary <string, Image> iconsDict = new Dictionary<string, Image>();
 
 	// Use this for initialization
 	void Awake () 
 	{
 		rb = GetComponent<Rigidbody2D>();
+		GameManager.CacheIcons(iconsDict, IconContainer);
 	}
 
 	void Start ()
@@ -38,6 +52,7 @@ public class PlayerController : MonoBehaviour {
 		if (col.gameObject.CompareTag("npc"))
 		{
 			print ("collision");
+			col.gameObject.GetComponent<NPCController>().EnableIconContainer();
 		}
 
 	}

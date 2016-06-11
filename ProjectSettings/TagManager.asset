@@ -9,6 +9,10 @@ TagManager:
   - NPCIcon2
   - NPCIcon3
   - NPCIcon4
+  - PlayerIcon1
+  - PlayerIcon2
+  - PlayerIcon3
+  - PlayerIcon4
   layers:
   - Default
   - TransparentFX

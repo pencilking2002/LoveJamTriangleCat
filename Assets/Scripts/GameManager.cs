@@ -1,10 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
 
 	//---------------------------------------------------------------------------------------------------------------------------
-	// Priate Variables
+	// Public Variables
 	//---------------------------------------------------------------------------------------------------------------------------
 
 	//public PlayerController player;
@@ -13,10 +15,8 @@ public class GameManager : MonoBehaviour {
 
 
 	//---------------------------------------------------------------------------------------------------------------------------
-	// Priate Variables
+	// Private Variables
 	//---------------------------------------------------------------------------------------------------------------------------
-	[HideInInspector]
-	//public InputDevice inputDevice;
 
 	// Use this for initialization
 	void Awake () 
@@ -33,5 +33,22 @@ public class GameManager : MonoBehaviour {
 		//inputDevice = InputManager.ActiveDevice;
 		h = Input.GetAxis ("Horizontal");
 		v = Input.GetAxis ("Vertical");
+	}
+
+	public static void CacheIcons(Dictionary<string, Image> iconsDict, Image container)
+	{	
+
+		if (container == null)
+		{
+			Debug.LogError("Icon container is not defined.Did you hook it up in the editor?");
+		}
+
+		var containerTransf = container.transform;
+
+		foreach(Transform icon in containerTransf)
+		{
+			var imageIcon = icon.GetComponent<Image>();
+			iconsDict.Add(icon.gameObject.tag, imageIcon);
+		}
 	}
 }

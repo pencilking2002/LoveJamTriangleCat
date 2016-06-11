@@ -6,26 +6,31 @@ using System.Collections.Generic;
 public class NPCController : MonoBehaviour {
 
 	public Image IconContainer;
+	public float scaleTweenTime = 1.0f;
 
 	private Dictionary <string, Image> iconsDict = new Dictionary<string, Image>();
 
 	// Use this for initialization
 	void Awake () 
 	{
-		if (IconContainer == null)
-		{
-			Debug.LogError("Icon container is not defined.Did you hook it up in the editor?");
-		}
-
-		foreach(Transform icon in IconContainer.transform)
-		{
-			var imageIcon = icon.GetComponent<Image>();
-			iconsDict.Add(icon.gameObject.tag, imageIcon);
-		}
+		IconContainer.gameObject.SetActive(false);
+		GameManager.CacheIcons(iconsDict, IconContainer);
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+	{
 	
 	}
+
+
+
+	public void EnableIconContainer()
+	{
+		IconContainer.gameObject.SetActive(true);
+		IconContainer.transform.localScale = Vector3.zero;
+		LeanTween.scale(IconContainer.gameObject, Vector3.one, scaleTweenTime).setEase(LeanTweenType.easeOutQuint);
+	}
+
+
 }

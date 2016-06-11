@@ -3,14 +3,16 @@ using System.Collections;
 
 public class InputController : MonoBehaviour {
 
-	public static InputController Instance;
-	//PlayerActions playerActions;
-	//PlayerActionSet playerActions;
+	//---------------------------------------------------------------------------------------------------------------------------
+	// Public Variables
+	//---------------------------------------------------------------------------------------------------------------------------
 
+	public static InputController Instance;
 	public static float h, v;
 
-	//InputDevice device;
-
+	//---------------------------------------------------------------------------------------------------------------------------
+	// Private Variables
+	//---------------------------------------------------------------------------------------------------------------------------
 
 	// Use this for initialization
 	void Awake () 

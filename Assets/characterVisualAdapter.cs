@@ -27,13 +27,13 @@ public class characterVisualAdapter : MonoBehaviour {
     }
 
     public void leftHandFront() {
-        diffLeft = 2;
-        diffRight = -2;
+        diffLeft = -2;
+        diffRight = 2;
     }
 
     public void rightHandFront() {
-        diffLeft = -2;
-        diffRight = 2;
+        diffLeft = 2;
+        diffRight = -2;
     }
 
     void newLayers() {
@@ -47,6 +47,6 @@ public class characterVisualAdapter : MonoBehaviour {
     }
 	
 	void Update () {
-	
+        newLayers();
 	}
 }

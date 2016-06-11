@@ -24,11 +24,6 @@ public class InputController : MonoBehaviour {
 	}
 
 
-	void OnEnable()
-	{
-		// See PlayerActions.cs for this setup.
-		//playerActions = PlayerActionSet.CreateWithDefaultBindings();
-	}
 	// Update is called once per frame
 	void Update () 
 	{

@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour {
 
 	public float moveSpeed = 10.0f;
 	public Image IconContainer;
+	private bool canMove = true;
 
 	//---------------------------------------------------------------------------------------------------------------------------
 	// Private Variables
@@ -20,12 +21,21 @@ public class PlayerController : MonoBehaviour {
 	private Rigidbody2D rb;
 
 	private Dictionary <string, Image> iconsDict = new Dictionary<string, Image>();
+	private Dictionary <string, Sprite> hiddenIconSprites = new Dictionary<string, Sprite>();
+
+	public Sprite hiddenIcon1;
+	public Sprite hiddenIcon2;
+	public Sprite hiddenIcon3;
+	public Sprite hiddenIcon4;
+
 
 	// Use this for initialization
 	void Awake () 
 	{
 		rb = GetComponent<Rigidbody2D>();
 		GameManager.CacheIcons(iconsDict, IconContainer);
+		CacheHiddenIconSprites();
+		//ObfuscateIcons();
 	}
 
 	void Start ()
@@ -36,7 +46,10 @@ public class PlayerController : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () 
 	{
-		MovePlayer();
+		if (canMove)
+		{
+			MovePlayer();
+		}
 	}
 
 	void MovePlayer()
@@ -54,6 +67,21 @@ public class PlayerController : MonoBehaviour {
 			print ("collision");
 			col.gameObject.GetComponent<NPCController>().EnableIconContainer();
 		}
+
+	}
+
+	void RevealIcon(Image icon)
+	{
+		string iconTag = icon.tag;
+		icon.sprite = hiddenIconSprites[icon.tag];
+	}
+
+	void CacheHiddenIconSprites()
+	{
+		hiddenIconSprites.Add("PlayerIcon1", hiddenIcon1);
+		hiddenIconSprites.Add("PlayerIcon2", hiddenIcon2);
+		hiddenIconSprites.Add("PlayerIcon3", hiddenIcon3);
+		hiddenIconSprites.Add("PlayerIcon4", hiddenIcon4);
 
 	}
 }

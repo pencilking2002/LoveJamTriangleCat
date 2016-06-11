@@ -50,6 +50,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: MainUI
+    uniqueID: 1190552755
+    locked: 0
   - name: SortingLayerUI
     uniqueID: 2623401089
     locked: 0

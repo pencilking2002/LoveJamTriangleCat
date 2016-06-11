@@ -63,24 +63,20 @@ public class PlayerController : MonoBehaviour {
 
 		// Going right
 		if (InputController.h > 0)
-		{
 			animator.SetInteger(anim_moveDirection, 3);
-		}
+		
 		// Going left
 		else if (InputController.h < 0)
-		{
 			animator.SetInteger(anim_moveDirection, 1);
-		}
+		
 		// Going up or down
 		else if (Mathf.Abs(InputController.v) > 0)
-		{
 			animator.SetInteger(anim_moveDirection, 2);
-		} 
+		
 		// else Idle
 		else 
-		{
 			animator.SetInteger(anim_moveDirection, 0);
-		}
+		
 	}
 
 
@@ -90,6 +86,7 @@ public class PlayerController : MonoBehaviour {
 		{
 			print ("collision");
 			canMove = false;
+			animator.SetInteger(anim_moveDirection, 0);
 			col.gameObject.GetComponent<NPCController>().EnableIconContainer();
 		}
 

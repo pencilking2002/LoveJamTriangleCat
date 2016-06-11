@@ -20,16 +20,16 @@ public class NPCController : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
 	{
-	
+		
 	}
-
 
 
 	public void EnableIconContainer()
 	{
 		IconContainer.gameObject.SetActive(true);
-		IconContainer.transform.localScale = Vector3.zero;
-		LeanTween.scale(IconContainer.gameObject, Vector3.one, scaleTweenTime).setEase(LeanTweenType.easeOutQuint);
+		//IconContainer.transform.localScale = Vector3.zero;
+		//LeanTween.moveX(IconContainer.gameObject, Vector3.one, scaleTweenTime).setEase(LeanTweenType.easeOutQuint);
+		LeanTween.moveX(IconContainer.rectTransform, 0, 0.5f);
 	}
 
 

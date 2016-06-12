@@ -121,6 +121,7 @@ public class GameManager : MonoBehaviour {
 			//IconContainer.transform.localScale = Vector3.zero;
 			//LeanTween.moveX(IconContainer.gameObject, Vector3.one, scaleTweenTime).setEase(LeanTweenType.easeOutQuint);
 			LeanTween.moveX(IconContainer.rectTransform, 0, 0.5f);
+
 		}
 		else
 		{

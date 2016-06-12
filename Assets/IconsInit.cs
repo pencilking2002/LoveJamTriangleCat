@@ -61,7 +61,7 @@ public class IconsInit : MonoBehaviour {
 			Icon.currentIndex = index;
 			Icon.startingChoice = Icon.choice[index];
 
-			string tag = Icon.startingChoice.tag;
+			//string tag = Icon.startingChoice.tag;
 
 			// Get  reference to the currect Icon
 			IconChoice currentIcon = Icon;
@@ -82,6 +82,8 @@ public class IconsInit : MonoBehaviour {
 			{
 				if (choice.GetInstanceID() != Icon.startingChoice.GetInstanceID())
 					choice.color = GetVisibility(choice.color, false);
+				else
+					choice.color = GetVisibility(choice.color, true);
 			}
 			//Icon.startingChoice = Icon.choice
 		}	

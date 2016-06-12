@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour {
 	//---------------------------------------------------------------------------------------------------------------------------
 	// Public Variables
 	//---------------------------------------------------------------------------------------------------------------------------
+	public bool testing = false;
 
 	public float moveSpeed = 10.0f;
 	public Image IconContainer;
@@ -33,13 +34,20 @@ public class PlayerController : MonoBehaviour {
 	// Use this for initialization
 	void Awake () 
 	{
-		if (IconContainer == null)
-			IconContainer = GameObject.FindGameObjectWithTag("PlayerIconContainer").GetComponent<Image>();
+		if (!testing)
+		{
+			if (IconContainer == null)
+				IconContainer = GameObject.FindGameObjectWithTag("PlayerIconContainer").GetComponent<Image>();
+		}
 
 		rb = GetComponent<Rigidbody2D>();
 		animator = GetComponent<Animator>();
 		GameManager.CacheIcons(iconsDict, IconContainer);
-		CacheHiddenIconSprites();
+
+		if (!testing)
+		{
+			CacheHiddenIconSprites();
+		}
 		//ObfuscateIcons();
 	}
 

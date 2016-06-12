@@ -33,6 +33,9 @@ public class PlayerController : MonoBehaviour {
 	// Use this for initialization
 	void Awake () 
 	{
+		if (IconContainer == null)
+			IconContainer = GameObject.FindGameObjectWithTag("PlayerIconContainer").GetComponent<Image>();
+
 		rb = GetComponent<Rigidbody2D>();
 		animator = GetComponent<Animator>();
 		GameManager.CacheIcons(iconsDict, IconContainer);

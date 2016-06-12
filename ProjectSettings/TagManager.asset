@@ -13,6 +13,8 @@ TagManager:
   - PlayerIcon2
   - PlayerIcon3
   - PlayerIcon4
+  - NPCIconContainer
+  - PlayerIconContainer
   layers:
   - Default
   - TransparentFX

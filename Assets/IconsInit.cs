@@ -117,6 +117,10 @@ public class IconsInit : MonoBehaviour {
 				LeanTween.scale(theIcon, Vector3.one, 0.1f);
 			});
 		}
+		else
+		{
+			NextChoiceDown(Icon);
+		}
 
 
 	}
@@ -145,6 +149,10 @@ public class IconsInit : MonoBehaviour {
 			LeanTween.scale(theIcon, Vector3.one * 1.1f, 0.1f).setOnComplete(() => {
 				LeanTween.scale(theIcon, Vector3.one, 0.1f);
 			});
+		}
+		else
+		{
+			NextChoiceUp(Icon);
 		}
 
 

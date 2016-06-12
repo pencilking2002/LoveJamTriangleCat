@@ -157,7 +157,7 @@ GameObject:
   - 114: {fileID: 58899673}
   m_Layer: 5
   m_Name: NPCCanvas
-  m_TagString: NPCIconContainer
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -640,7 +640,7 @@ GameObject:
   - 114: {fileID: 255114635}
   m_Layer: 5
   m_Name: IconContainer
-  m_TagString: NPCIconContainer
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -812,6 +812,14 @@ Prefab:
       propertyPath: m_Size.y
       value: 1.0594711
       objectReference: {fileID: 0}
+    - target: {fileID: 11405988, guid: 843d3bbc4bbcc4eeb9e878db2cf1cd93, type: 2}
+      propertyPath: testing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11405988, guid: 843d3bbc4bbcc4eeb9e878db2cf1cd93, type: 2}
+      propertyPath: IconContainer
+      value: 
+      objectReference: {fileID: 97201709}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 843d3bbc4bbcc4eeb9e878db2cf1cd93, type: 2}
   m_IsPrefabParent: 0
@@ -2279,6 +2287,7 @@ MonoBehaviour:
   moveDamp: 0.03
   limitDL: {fileID: 0}
   limitUR: {fileID: 0}
+  moveSpeed: 0
 --- !u!1 &769648400
 GameObject:
   m_ObjectHideFlags: 0
@@ -4062,7 +4071,7 @@ Prefab:
     - target: {fileID: 11494666, guid: 610eea6d4329f47e4a9c47a6014d0537, type: 2}
       propertyPath: IconContainer
       value: 
-      objectReference: {fileID: 1644088435}
+      objectReference: {fileID: 255114636}
     - target: {fileID: 22418796, guid: 610eea6d4329f47e4a9c47a6014d0537, type: 2}
       propertyPath: m_AnchoredPosition.x
       value: 0.04

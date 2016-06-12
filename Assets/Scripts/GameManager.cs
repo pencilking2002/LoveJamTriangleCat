@@ -122,6 +122,8 @@ public class GameManager : MonoBehaviour {
 		}
 		else
 		{
+			state = State.WalkingAround;
+
 			LeanTween.moveX(IconContainer.rectTransform, initialPosition.x, 0.5f).setOnComplete(() =>
 			{
 				IconContainer.gameObject.SetActive(false);

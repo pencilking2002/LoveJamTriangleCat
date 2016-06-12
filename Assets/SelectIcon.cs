@@ -89,6 +89,9 @@ public class SelectIcon : MonoBehaviour {
 		currentSelectedIcon = index;
 		AudioManager.Instance.PlayEffect(AudioManager.Clip.TileSelect);	
 		DeselectIcons();
+
+		RectTransform iconRT = icons[currentSelectedIcon].GetComponent<RectTransform>();
+		IconsInit.Instance.NextChoiceUp(iconRT);
 	}
 
 	public void DismissEncounterUI()

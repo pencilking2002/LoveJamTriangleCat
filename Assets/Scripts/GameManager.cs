@@ -34,8 +34,7 @@ public class GameManager : MonoBehaviour {
 	//---------------------------------------------------------------------------------------------------------------------------
 
 	// Use this for initialization
-	void Awake () 
-	{
+	void Awake () {
 		if(Instance == null)
 			Instance = this;
 		else 
@@ -53,7 +52,10 @@ public class GameManager : MonoBehaviour {
 		//inputDevice = InputManager.ActiveDevice;
 		h = Input.GetAxis ("Horizontal");
 		v = Input.GetAxis ("Vertical");
-	}
+
+        if (Input.GetKeyDown(KeyCode.L) && state == State.Menu)
+            beginGame();
+    }
 
 	public static void CacheIcons(Dictionary<string, Image> iconsDict, Image container)
 	{	
@@ -103,6 +105,11 @@ public class GameManager : MonoBehaviour {
 		return state == State.GameOver;
 	}
 
+    public void beginGame() {
+        state = State.WalkingAround;
+        GameObject.FindGameObjectWithTag("Player").GetComponent<VisMessageTrigger>().enabled = false;
+        Camera.main.GetComponent<CamController>().cameraAdjustToGame();
+    }
 
 	public void EnableIconContainer(bool enable)
 	{

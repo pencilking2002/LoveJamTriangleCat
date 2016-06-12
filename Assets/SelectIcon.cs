@@ -10,6 +10,8 @@ public class SelectIcon : MonoBehaviour {
 	public Sprite selectedSprite;
 	private int currentSelectedIcon = 0;
 
+	private Vector3 defaultScale;
+
 	// Use this for initialization
 	void Start () 
 	{
@@ -20,6 +22,7 @@ public class SelectIcon : MonoBehaviour {
 
 		var firstIcon =	icons[0].GetComponent<Image>();
 		firstIcon.sprite = selectedSprite;
+
 	}
 	
 	// Update is called once per frame
@@ -27,14 +30,14 @@ public class SelectIcon : MonoBehaviour {
 	{
 		if (GameManager.Instance.IsInEncounter())
 		{
-			if (Input.GetKeyDown(KeyCode.RightArrow) && currentSelectedIcon != 3)
+			if ((Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D)) && currentSelectedIcon != 3)
 			{
 				print("hit right");
 				currentSelectedIcon++;
 				DeselectIcons();
 				AudioManager.Instance.PlayEffect(AudioManager.Clip.TileSelect);	
 			}
-			else if (Input.GetKeyDown(KeyCode.LeftArrow) && currentSelectedIcon != 0)
+			else if ((Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A)) && currentSelectedIcon != 0)
 			{
 				print("hit right");
 				currentSelectedIcon--;
@@ -55,6 +58,10 @@ public class SelectIcon : MonoBehaviour {
 			}
 			else
 			{
+				var theIcon = icon;
+				LeanTween.scale(theIcon, Vector3.one * 1.1f, 0.1f).setOnComplete(() => {
+					LeanTween.scale(theIcon, Vector3.one, 0.1f);
+				});
 				icon.GetComponent<Image>().sprite = selectedSprite;
 			}
 		}

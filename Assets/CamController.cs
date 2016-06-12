@@ -8,6 +8,11 @@ public class CamController : MonoBehaviour {
 
 	private Vector3 moveVel;
 
+    [SerializeField]
+    private Transform limitDL;
+    [SerializeField]
+    private Transform limitUR;
+
 	// Use this for initialization
 	void Awake () 
 	{
@@ -18,7 +23,7 @@ public class CamController : MonoBehaviour {
 	// Update is called once per frame
 	void LateUpdate () 
 	{	
-		var targetPos = new Vector3(player.position.x, player.position.y, transform.position.z) + offset;
+		var targetPos = new Vector3(Mathf.Clamp(player.position.x, limitDL.position.x, limitUR.position.x), Mathf.Clamp(player.position.y, limitDL.position.y, limitUR.position.y), transform.position.z) + offset;
 		transform.position = Vector3.SmoothDamp(transform.position, targetPos, ref moveVel, moveDamp);
 	}
 }

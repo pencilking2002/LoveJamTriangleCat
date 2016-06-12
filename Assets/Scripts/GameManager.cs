@@ -109,6 +109,8 @@ public class GameManager : MonoBehaviour {
         state = State.WalkingAround;
         GameObject.FindGameObjectWithTag("Player").GetComponent<VisMessageTrigger>().enabled = false;
         Camera.main.GetComponent<CamController>().cameraAdjustToGame();
+        if (GameObject.FindGameObjectWithTag("Respawn") != null)
+            GameObject.FindGameObjectWithTag("Respawn").GetComponent<startMenuManager>().clearAll();
     }
 
 	public void EnableIconContainer(bool enable)

@@ -1088,6 +1088,12 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 199674966}
+--- !u!114 &201816113 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11422372, guid: 4d85fdd09b7d64fa8aa7458797186208,
+    type: 2}
+  m_PrefabInternal: {fileID: 1083200226}
+  m_Script: {fileID: 11500000, guid: f08ba9fd2633c42f8bd69be38ea9a240, type: 3}
 --- !u!4 &224559055 stripped
 Transform:
   m_PrefabParentObject: {fileID: 485302, guid: 3aff03448f281cd489fea2d68dd8b0d3, type: 2}
@@ -2931,8 +2937,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f547ca6da92a54350a77b03eb9b03039, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NPCThoughtPanel: {fileID: 0}
   IconContainer: {fileID: 1644088435}
   scaleTweenTime: 1.5
+  initialPosition: {x: 0, y: 0, z: 0}
 --- !u!4 &622794803 stripped
 Transform:
   m_PrefabParentObject: {fileID: 418272, guid: d0817ac5f2a387d4cb6cdc12d6401323, type: 2}
@@ -3977,7 +3985,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 837681189}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 201816113}
+        m_MethodName: beginGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &837681189
@@ -3992,7 +4011,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -4417,6 +4436,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 11422372, guid: 4d85fdd09b7d64fa8aa7458797186208, type: 2}
+      propertyPath: testing
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11422372, guid: 4d85fdd09b7d64fa8aa7458797186208, type: 2}
+      propertyPath: IconContainer
+      value: 
+      objectReference: {fileID: 97201709}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4d85fdd09b7d64fa8aa7458797186208, type: 2}
   m_IsPrefabParent: 0
@@ -6026,9 +6053,10 @@ GameObject:
   - 223: {fileID: 1419247054}
   - 114: {fileID: 1419247053}
   - 114: {fileID: 1419247052}
+  - 114: {fileID: 1419247056}
   m_Layer: 5
   m_Name: menuCanvas
-  m_TagString: Untagged
+  m_TagString: Respawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6100,17 +6128,33 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 1650535596}
   - {fileID: 1577070486}
+  - {fileID: 1650535596}
   - {fileID: 837681187}
   - {fileID: 8701971}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1419247056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1419247051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9d4a5a04bc80eb48aa0d3dfa896388f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panelQuote: {fileID: 1650535595}
+  panelRules: {fileID: 1577070485}
+  buttonStart: {fileID: 837681186}
+  colorWhite: {r: 1, g: 1, b: 1, a: 1}
+  colorInvis: {r: 1, g: 1, b: 1, a: 0}
 --- !u!1001 &1423555848
 Prefab:
   m_ObjectHideFlags: 0
@@ -6802,7 +6846,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1419247055}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_AnchorMin: {x: 0.1, y: 0.15}
   m_AnchorMax: {x: 0.9, y: 0.85}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -7182,7 +7226,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1419247055}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_AnchorMin: {x: 0.1, y: 0.15}
   m_AnchorMax: {x: 0.9, y: 0.85}
   m_AnchoredPosition: {x: 0, y: 0}

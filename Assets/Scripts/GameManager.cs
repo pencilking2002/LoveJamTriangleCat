@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour {
 		InEncounter,
 		GameOver
 	}
-	State state = State.WalkingAround;
+	State state = State.Menu;
 
 	//---------------------------------------------------------------------------------------------------------------------------
 	// Private Variables
@@ -64,7 +64,7 @@ public class GameManager : MonoBehaviour {
 
 	void OnGUI ()
 	{
-		GUI.Button(new Rect(10,10, 100,40), "GameObject State: " + state);
+		GUI.Button(new Rect(10,10, 200,40), "GameObject State: " + state);
 	}
 
 	public void SetState(State s)

@@ -24,6 +24,7 @@ public class characterVisualAdapter : MonoBehaviour {
     private int diffRight;
 
     private int faceDiff;
+    private int hairDiff;
     private int hairBackDiff;
 
     void Start () {
@@ -44,11 +45,13 @@ public class characterVisualAdapter : MonoBehaviour {
 
     public void facingForward() {
         faceDiff = 2;
+        hairDiff = 3;
         hairBackDiff = 0;
     }
 
     public void facingBack() {
         faceDiff = 0;
+        hairDiff = 0;
         hairBackDiff = 2;
     }
 
@@ -58,7 +61,7 @@ public class characterVisualAdapter : MonoBehaviour {
         rendLegs.sortingOrder = (Mathf.RoundToInt(transform.position.y * -100)) + 1;
         rendHead.sortingOrder = (Mathf.RoundToInt(transform.position.y * -100)) + 1;
         rendFace.sortingOrder = (Mathf.RoundToInt(transform.position.y * -100)) + faceDiff;
-        rendHair.sortingOrder = (Mathf.RoundToInt(transform.position.y * -100)) + 3;
+        rendHair.sortingOrder = (Mathf.RoundToInt(transform.position.y * -100)) + hairDiff;
         rendHandL.sortingOrder = (Mathf.RoundToInt(transform.position.y * -100)) + diffLeft;
         rendHandR.sortingOrder = (Mathf.RoundToInt(transform.position.y * -100)) + diffRight;
     }

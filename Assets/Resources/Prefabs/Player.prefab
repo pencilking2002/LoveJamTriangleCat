@@ -357,7 +357,7 @@ MonoBehaviour:
   rendHandR: {fileID: 21298686}
   rendFace: {fileID: 21293622}
   rendHair: {fileID: 21248436}
-  rendHairBack: {fileID: 0}
+  rendHairBack: {fileID: 21273028}
 --- !u!114 &11482144
 MonoBehaviour:
   m_ObjectHideFlags: 1

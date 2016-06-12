@@ -62,20 +62,32 @@ public class PlayerController : MonoBehaviour {
 		rb.velocity = moveDirection * moveSpeed;
 
 		// Going right
-		if (InputController.h > 0)
+		if (InputController.h > 0) {
 			animator.SetInteger(anim_moveDirection, 3);
+            GetComponent<characterVisualAdapter>().facingForward();
+        }
 		
 		// Going left
-		else if (InputController.h < 0)
+		else if (InputController.h < 0) {
 			animator.SetInteger(anim_moveDirection, 1);
+            GetComponent<characterVisualAdapter>().facingForward();
+        }
 		
 		// Going up or down
-		else if (Mathf.Abs(InputController.v) > 0)
+		else if (Mathf.Abs(InputController.v) > 0) {
 			animator.SetInteger(anim_moveDirection, 2);
+            if (InputController.v > 0)
+                GetComponent<characterVisualAdapter>().facingBack();
+            else
+                GetComponent<characterVisualAdapter>().facingForward();
+        }
 		
 		// else Idle
-		else 
+		else {
 			animator.SetInteger(anim_moveDirection, 0);
+            GetComponent<characterVisualAdapter>().facingForward();
+        }
+
 		
 	}
 

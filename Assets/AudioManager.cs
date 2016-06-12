@@ -1,18 +1,79 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class AudioManager : MonoBehaviour {
 
-	public AudioClip[] clips;
-	private AudioSource source;
+	public enum Clip
+	{	
+		MenuAudio,
+		ParkAmbient,
+
+		TileSelect,
+		Bump,
+		Click,
+		CodeWrong,
+		CodePartial,
+		CodeSuccess
+	}
+
+	public Dictionary<Clip, AudioClip> audioClipDict;
+
+	public static AudioManager Instance;
+
+	[Header("Music/Ambient")]
+	public AudioClip ambientParkAudio;
+	public AudioClip menuAudio;
+
+	[Header("Effects")]
+	public AudioClip tileSelectAudio;
+	public AudioClip[] bumps = new AudioClip[3];
+	public AudioClip[] codeClicks = new AudioClip[5];
+	public AudioClip codePartial;
+	public AudioClip codeSuccess;
+	public AudioClip codeWrong;
+	//public digc
+
+	public AudioSource musicSource;
+	public AudioSource effectsSource;
 
 	// Use this for initialization
-	void Start () {
-	
+	void Awake () {
+
+		if (Instance == null)
+			Instance = this;
+		else
+			Destroy(this);
+
+		audioClipDict = new Dictionary<Clip, AudioClip>()
+		{
+			{Clip.MenuAudio, menuAudio},
+			{Clip.ParkAmbient, ambientParkAudio},
+			{Clip.TileSelect, tileSelectAudio},
+			{Clip.Bump, bumps[0]},
+			{Clip.Click, codeClicks[0]},
+			{Clip.CodeSuccess, codePartial},
+			{Clip.CodePartial, codeSuccess},
+			{Clip.CodeWrong, codeWrong}
+		};
 	}
 	
 	// Update is called once per frame
 	void Update () {
 	
 	}
+
+	public void PlayMusic(Clip c)
+	{
+		musicSource.PlayOneShot(audioClipDict[c]);
+
+	}
+
+	public void PlayEffect(Clip c)
+	{
+		effectsSource.PlayOneShot(audioClipDict[c]);
+	}
+
+
+
 }

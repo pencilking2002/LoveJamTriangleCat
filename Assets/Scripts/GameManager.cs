@@ -13,6 +13,14 @@ public class GameManager : MonoBehaviour {
 	public static GameManager Instance;
 	public static float v, h;
 
+	public enum State
+	{
+		Menu,
+		WalkingAround,
+		InEncounter,
+		GameOver
+	}
+	State state = State.WalkingAround;
 
 	//---------------------------------------------------------------------------------------------------------------------------
 	// Private Variables
@@ -53,4 +61,38 @@ public class GameManager : MonoBehaviour {
 			iconsDict.Add(icon.gameObject.tag, imageIcon);
 		}
 	}
+
+	void OnGUI ()
+	{
+		GUI.Button(new Rect(10,10, 100,40), "GameObject State: " + state);
+	}
+
+	public void SetState(State s)
+	{
+		state = s;
+	}
+
+	public bool IsInMenu()
+	{
+		return state == State.Menu;
+	}
+
+	public bool IsWalkingAround()
+	{
+		return state == State.WalkingAround;
+	}
+
+	public bool IsInEncounter()
+	{
+		return state == State.InEncounter;
+	}
+
+	public bool IsGameOver()
+	{
+		return state == State.GameOver;
+	}
+
+
+
+
 }

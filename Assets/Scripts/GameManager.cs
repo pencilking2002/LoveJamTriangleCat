@@ -9,6 +9,9 @@ public class GameManager : MonoBehaviour {
 	//---------------------------------------------------------------------------------------------------------------------------
 	// Public Variables
 	//---------------------------------------------------------------------------------------------------------------------------
+	public int numNPCVisited = 0;
+	public int winCondition = 1;
+	public GameObject winMenu;
 
 	public Image IconContainer;
 	public Vector3 initialPosition = Vector3.zero;
@@ -125,14 +128,36 @@ public class GameManager : MonoBehaviour {
 		}
 		else
 		{
-			state = State.WalkingAround;
-
-			LeanTween.moveX(IconContainer.rectTransform, initialPosition.x, 0.5f).setOnComplete(() =>
+			if (HasWon())
 			{
-				IconContainer.gameObject.SetActive(false);
-				currentNPCController.EnableThoughtPanel(true);
-			});
+				Win();
+			}
+			else
+			{
+				state = State.WalkingAround;
+
+				LeanTween.moveX(IconContainer.rectTransform, initialPosition.x, 0.5f).setOnComplete(() =>
+				{
+					IconContainer.gameObject.SetActive(false);
+					currentNPCController.EnableThoughtPanel(true);
+				});
+			}
 		}
+
+	}
+
+	public bool HasWon()
+	{
+		numNPCVisited++;
+		return numNPCVisited >= winCondition;
+	}
+
+	public void Win()
+	{
+		state = State.GameOver;
+		winMenu.SetActive(true);
+		AudioManager.Instance.PlayEffect(AudioManager.Clip.Win);
+	
 
 	}
 

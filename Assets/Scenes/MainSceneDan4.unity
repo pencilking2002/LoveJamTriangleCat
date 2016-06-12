@@ -2520,6 +2520,7 @@ MonoBehaviour:
   codePartial: {fileID: 8300000, guid: ef54a0588edd349049817ab69d3fa5e8, type: 3}
   codeSuccess: {fileID: 8300000, guid: ea353e623ad4d42a29198eb27a0b19ee, type: 3}
   codeWrong: {fileID: 8300000, guid: addbb8ac0971c44c09b6f4d4aaf06508, type: 3}
+  winAudio: {fileID: 8300000, guid: 93b52a4d32c014fb4ad69cbee7746a24, type: 3}
   musicSource: {fileID: 567223536}
   effectsSource: {fileID: 567223538}
 --- !u!82 &567223538
@@ -4310,6 +4311,14 @@ Prefab:
       propertyPath: IconContainer
       value: 
       objectReference: {fileID: 1983648184}
+    - target: {fileID: 11422372, guid: 4d85fdd09b7d64fa8aa7458797186208, type: 2}
+      propertyPath: winMenu
+      value: 
+      objectReference: {fileID: 8701970}
+    - target: {fileID: 11422372, guid: 4d85fdd09b7d64fa8aa7458797186208, type: 2}
+      propertyPath: winCondition
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4d85fdd09b7d64fa8aa7458797186208, type: 2}
   m_IsPrefabParent: 0

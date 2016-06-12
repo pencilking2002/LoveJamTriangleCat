@@ -14,7 +14,8 @@ public class AudioManager : MonoBehaviour {
 		Click,
 		CodeWrong,
 		CodePartial,
-		CodeSuccess
+		CodeSuccess,
+		Win
 	}
 
 	public Dictionary<Clip, AudioClip> audioClipDict;
@@ -32,6 +33,8 @@ public class AudioManager : MonoBehaviour {
 	public AudioClip codePartial;
 	public AudioClip codeSuccess;
 	public AudioClip codeWrong;
+	public AudioClip winAudio;
+
 	//public digc
 
 	public AudioSource musicSource;
@@ -54,7 +57,8 @@ public class AudioManager : MonoBehaviour {
 			{Clip.Click, codeClicks[0]},
 			{Clip.CodeSuccess, codePartial},
 			{Clip.CodePartial, codeSuccess},
-			{Clip.CodeWrong, codeWrong}
+			{Clip.CodeWrong, codeWrong},
+			{Clip.Win, winAudio}
 		};
 	}
 	

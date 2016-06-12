@@ -40,8 +40,8 @@ public class characterRandom : MonoBehaviour {
     [SerializeField]
     private Gradient gradientHair;
 
-    void Start () {
-	
+    void Awake () {
+        randomizeAll();
 	}
 
     void randomizeAll() {
@@ -64,8 +64,8 @@ public class characterRandom : MonoBehaviour {
     }
 	
 	void Update () {
-        if (Input.GetKeyDown(KeyCode.P))
-            randomizeAll();
+//        if (Input.GetKeyDown(KeyCode.P))
+//            randomizeAll();
 
 	}
 }

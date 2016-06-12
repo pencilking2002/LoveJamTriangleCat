@@ -41,7 +41,7 @@ public class GameManager : MonoBehaviour {
 		h = Input.GetAxis ("Horizontal");
 		v = Input.GetAxis ("Vertical");
 
-        if (Input.GetKeyDown(KeyCode.L))
+        if (Input.GetKeyDown(KeyCode.L) && state == State.Menu)
             beginGame();
     }
 
@@ -95,6 +95,7 @@ public class GameManager : MonoBehaviour {
 
     public void beginGame() {
         state = State.WalkingAround;
+        GameObject.FindGameObjectWithTag("Player").GetComponent<VisMessageTrigger>().enabled = false;
         Camera.main.GetComponent<CamController>().cameraAdjustToGame();
     }
 

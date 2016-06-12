@@ -44,8 +44,5 @@ public class CamController : MonoBehaviour {
             if (Vector3.Distance(offset, targetOffset) < 0.5f && Camera.main.orthographicSize >= 4.9f)
                 camAdjusting = false;
         }
-
-//        if (Input.GetKeyDown(KeyCode.L))
-//            cameraAdjustToGame();
     }
 }

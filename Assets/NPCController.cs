@@ -14,7 +14,7 @@ public class NPCController : MonoBehaviour {
 	void Awake () 
 	{
 		if (IconContainer == null)
-			GameObject.FindGameObjectWithTag("PlayerIconContainer").GetComponent<Image>();
+			GameObject.FindGameObjectWithTag("NPCIconContainer").GetComponent<Image>();
 
 		IconContainer.gameObject.SetActive(false);
 		GameManager.CacheIcons(iconsDict, IconContainer);

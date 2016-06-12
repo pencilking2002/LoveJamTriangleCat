@@ -357,10 +357,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 11471926, guid: 843d3bbc4bbcc4eeb9e878db2cf1cd93, type: 2}
-      propertyPath: IconContainer
-      value: 
-      objectReference: {fileID: 97201709}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 843d3bbc4bbcc4eeb9e878db2cf1cd93, type: 2}
   m_IsPrefabParent: 0
@@ -1368,6 +1364,56 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 9
+--- !u!1001 &1426870407
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 408546, guid: 610eea6d4329f47e4a9c47a6014d0537, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 2.72
+      objectReference: {fileID: 0}
+    - target: {fileID: 408546, guid: 610eea6d4329f47e4a9c47a6014d0537, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 4.89
+      objectReference: {fileID: 0}
+    - target: {fileID: 408546, guid: 610eea6d4329f47e4a9c47a6014d0537, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 408546, guid: 610eea6d4329f47e4a9c47a6014d0537, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 408546, guid: 610eea6d4329f47e4a9c47a6014d0537, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 408546, guid: 610eea6d4329f47e4a9c47a6014d0537, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 408546, guid: 610eea6d4329f47e4a9c47a6014d0537, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 408546, guid: 610eea6d4329f47e4a9c47a6014d0537, type: 2}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 11494666, guid: 610eea6d4329f47e4a9c47a6014d0537, type: 2}
+      propertyPath: IconContainer
+      value: 
+      objectReference: {fileID: 1644088435}
+    - target: {fileID: 116976, guid: 610eea6d4329f47e4a9c47a6014d0537, type: 2}
+      propertyPath: m_Name
+      value: NPC (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 610eea6d4329f47e4a9c47a6014d0537, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1468173792
 GameObject:
   m_ObjectHideFlags: 0

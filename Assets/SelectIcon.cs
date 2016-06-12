@@ -49,6 +49,7 @@ public class SelectIcon : MonoBehaviour {
 				RectTransform iconRT = icons[currentSelectedIcon].GetComponent<RectTransform>();
 				IconsInit.Instance.NextChoiceDown(iconRT);
 
+
 				//AudioManager.Instance.PlayEffect(AudioManager.Clip.Click);	
 			}
 			else if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W))
@@ -88,5 +89,10 @@ public class SelectIcon : MonoBehaviour {
 		currentSelectedIcon = index;
 		AudioManager.Instance.PlayEffect(AudioManager.Clip.TileSelect);	
 		DeselectIcons();
+	}
+
+	public void DismissEncounterUI()
+	{
+		
 	}
 }

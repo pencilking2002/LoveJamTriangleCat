@@ -110,10 +110,16 @@ public class PlayerController : MonoBehaviour {
 			print ("collision");
 			canMove = false;
 			animator.SetInteger(anim_moveDirection, 0);
-			col.gameObject.GetComponent<NPCController>().EnableIconContainer();
-			GameManager.Instance.SetState(GameManager.State.InEncounter);
 
+			NPCController npcController = col.gameObject.GetComponent<NPCController>();
+			GameManager.Instance.EnableIconContainer(true);
+
+			// Cache the current npc controller that the player is interacting with
+			GameManager.Instance.currentNPCController = npcController;
+
+			GameManager.Instance.SetState(GameManager.State.InEncounter);
 			IconsInit.Instance.ChooseRandomIcons();
+
 		}
 
 	}

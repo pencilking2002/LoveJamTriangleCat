@@ -91,7 +91,7 @@ public class IconsInit : MonoBehaviour {
 	{
 		//print (IconContainer.name);
 		IconChoice iconChoice = GetIconChoice(Icon);
-		int index = iconChoice.currentIndex + 1;
+		int index = iconChoice.currentIndex - 1;
 
 		if (WithinIndex(index))
 		{
@@ -109,6 +109,11 @@ public class IconsInit : MonoBehaviour {
 				else
 					choice.color = GetVisibility(choice.color, true);
 			}
+
+			var theIcon = Icon;
+			LeanTween.scale(theIcon, Vector3.one * 1.1f, 0.1f).setOnComplete(() => {
+				LeanTween.scale(theIcon, Vector3.one, 0.1f);
+			});
 		}
 
 
@@ -117,7 +122,7 @@ public class IconsInit : MonoBehaviour {
 	public void NextChoiceDown(RectTransform Icon)
 	{
 		IconChoice iconChoice = GetIconChoice(Icon);
-		int index = iconChoice.currentIndex - 1;
+		int index = iconChoice.currentIndex + 1;
 		if (WithinIndex(index))
 		{
 			AudioManager.Instance.PlayEffect(AudioManager.Clip.Click);
@@ -133,6 +138,11 @@ public class IconsInit : MonoBehaviour {
 				else
 					choice.color = GetVisibility(choice.color, true);
 			}
+
+			var theIcon = Icon;
+			LeanTween.scale(theIcon, Vector3.one * 1.1f, 0.1f).setOnComplete(() => {
+				LeanTween.scale(theIcon, Vector3.one, 0.1f);
+			});
 		}
 
 
@@ -159,7 +169,7 @@ public class IconsInit : MonoBehaviour {
 
 	bool WithinIndex (int index)
 	{
-		return (index < 4 && index > 0);
+		return (index < 4 && index >= 0);
 	}
 
 	Color GetVisibility(Color currentColor, bool visible)

@@ -4,15 +4,22 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
+	public bool testing;
 
 	//---------------------------------------------------------------------------------------------------------------------------
 	// Public Variables
 	//---------------------------------------------------------------------------------------------------------------------------
 
+	public Image IconContainer;
+	public Vector3 initialPosition = Vector3.zero;
+
 	//public PlayerController player;
 	public static GameManager Instance;
 	public static float v, h;
 
+	[HideInInspector]
+	public NPCController currentNPCController;
+	 
 	public enum State
 	{
 		Menu,
@@ -33,6 +40,11 @@ public class GameManager : MonoBehaviour {
 			Instance = this;
 		else 
 			Destroy(this);
+
+		if (testing)
+			state = State.WalkingAround;
+
+		initialPosition = IconContainer.GetComponent<RectTransform>().localPosition;
 	}
 	
 	// Update is called once per frame
@@ -92,6 +104,24 @@ public class GameManager : MonoBehaviour {
 	}
 
 
+	public void EnableIconContainer(bool enable)
+	{
+		if (enable)
+		{
+			IconContainer.gameObject.SetActive(true);
+			//IconContainer.transform.localScale = Vector3.zero;
+			//LeanTween.moveX(IconContainer.gameObject, Vector3.one, scaleTweenTime).setEase(LeanTweenType.easeOutQuint);
+			LeanTween.moveX(IconContainer.rectTransform, 0, 0.5f);
+		}
+		else
+		{
+			LeanTween.moveX(IconContainer.rectTransform, initialPosition.x, 0.5f).setOnComplete(() =>
+			{
+				IconContainer.gameObject.SetActive(false);
+				currentNPCController.EnableThoughtPanel(true);
+			});
+		}
 
+	}
 
 }

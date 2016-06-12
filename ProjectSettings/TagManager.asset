@@ -15,6 +15,10 @@ TagManager:
   - PlayerIcon4
   - NPCIconContainer
   - PlayerIconContainer
+  - Star
+  - Cat
+  - Sun
+  - Heart
   layers:
   - Default
   - TransparentFX

@@ -104,6 +104,8 @@ public class PlayerController : MonoBehaviour {
 			animator.SetInteger(anim_moveDirection, 0);
 			col.gameObject.GetComponent<NPCController>().EnableIconContainer();
 			GameManager.Instance.SetState(GameManager.State.InEncounter);
+
+			IconsInit.Instance.ChooseRandomIcons();
 		}
 
 	}

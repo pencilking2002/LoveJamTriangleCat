@@ -44,6 +44,21 @@ public class SelectIcon : MonoBehaviour {
 				DeselectIcons();
 				AudioManager.Instance.PlayEffect(AudioManager.Clip.TileSelect);	
 			}
+			else if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S))
+			{
+				RectTransform iconRT = icons[currentSelectedIcon].GetComponent<RectTransform>();
+				IconsInit.Instance.NextChoiceDown(iconRT);
+
+				//AudioManager.Instance.PlayEffect(AudioManager.Clip.Click);	
+			}
+			else if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W))
+			{
+				RectTransform iconRT = icons[currentSelectedIcon].GetComponent<RectTransform>();
+				IconsInit.Instance.NextChoiceUp(iconRT);
+				//AudioManager.Instance.PlayEffect(AudioManager.Clip.Click);	
+
+			}
+
 		}
 
 	}
@@ -65,5 +80,13 @@ public class SelectIcon : MonoBehaviour {
 				icon.GetComponent<Image>().sprite = selectedSprite;
 			}
 		}
+	}
+
+	public void MouseSelectIcon(int index)
+	{
+		print ("pressed icon");
+		currentSelectedIcon = index;
+		AudioManager.Instance.PlayEffect(AudioManager.Clip.TileSelect);	
+		DeselectIcons();
 	}
 }

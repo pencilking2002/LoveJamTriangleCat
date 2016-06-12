@@ -183,7 +183,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 146626}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.08, y: 2.45, z: 0}
+  m_LocalPosition: {x: -13.67, y: -7.06, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -563,8 +563,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f547ca6da92a54350a77b03eb9b03039, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NPCThoughtPanel: {fileID: 0}
   IconContainer: {fileID: 0}
   scaleTweenTime: 1
+  initialPosition: {x: 0, y: 0, z: 0}
 --- !u!212 &21208890
 SpriteRenderer:
   m_ObjectHideFlags: 1

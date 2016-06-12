@@ -20,7 +20,7 @@ public class NPCController : MonoBehaviour {
 		if (IconContainer == null)
 			GameObject.FindGameObjectWithTag("NPCIconContainer").GetComponent<Image>();
 
-		IconContainer.gameObject.SetActive(false);
+//		IconContainer.gameObject.SetActive(false);
 		GameManager.CacheIcons(iconsDict, IconContainer);
 
 		initialPosition = IconContainer.transform.position;
@@ -60,14 +60,14 @@ public class NPCController : MonoBehaviour {
 
 	public void EnableThoughtPanel(bool enable)
 	{
-		if (enable)
-		{
-			LeanTween.scale(NPCThoughtPanel, Vector3.one, 0.5f);
-		}
-		else
-		{
-			LeanTween.scale(NPCThoughtPanel, Vector3.zero, 0.5f);
-		}
+//		if (enable)
+//		{
+//			LeanTween.scale(NPCThoughtPanel, Vector3.one, 0.5f);
+//		}
+//		else
+//		{
+//			LeanTween.scale(NPCThoughtPanel, Vector3.zero, 0.5f);
+//		}
 	}
 
 	public void SetIcon()

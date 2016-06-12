@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 222a3deb437f543c5a050e126020dc6d
-timeCreated: 1465684534
+timeCreated: 1465692727
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -236,41 +236,22 @@ TextureImporter:
     - name: ui-assets_9
       rect:
         serializedVersion: 2
-        x: 356
-        y: 213
-        width: 238
+        x: 396
+        y: 235
+        width: 201
         height: 106
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -119, y: 53}
-        - {x: -119, y: -29}
-        - {x: -116, y: -30}
-        - {x: -52, y: -53}
-        - {x: 38, y: -53}
-        - {x: 119, y: -28}
-        - {x: 119, y: 48}
-        - {x: 115, y: 53}
-    - name: ui-assets_10
-      rect:
-        serializedVersion: 2
-        x: 604
-        y: 213
-        width: 204
-        height: 105
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -100, y: 52.5}
-        - {x: -102, y: 49.5}
-        - {x: -102, y: -31.5}
-        - {x: -41, y: -52.5}
-        - {x: 68, y: -52.5}
-        - {x: 101, y: -42.5}
-        - {x: 102, y: -34.5}
-        - {x: 102, y: 52.5}
+      - - {x: -71.5, y: 46}
+        - {x: -95.5, y: 42}
+        - {x: -95.5, y: -46}
+        - {x: -68.5, y: -53}
+        - {x: 90.5, y: -53}
+        - {x: 98.5, y: -40}
+        - {x: 98.5, y: 37}
+        - {x: 88.5, y: 46}
     outline: []
   spritePackingTag: 
   userData: 

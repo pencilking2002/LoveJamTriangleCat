@@ -2517,7 +2517,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d216d25344c04b7ab8ac188af8f5cfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offset: {x: 3, y: 3, z: 0}
+  offset: {x: 1.2, y: 2, z: 0}
   player: {fileID: 1568731095}
   moveDamp: 0.03
 --- !u!4 &770538197 stripped

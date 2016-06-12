@@ -49,7 +49,6 @@ public class GameManager : MonoBehaviour {
 		if (container == null)
 		{
 			container = GameObject.FindGameObjectWithTag("NPCIconContainer").GetComponent<Image>();
-
 			//Debug.LogError("Icon container is not defined.Did you hook it up in the editor?");
 		}
 

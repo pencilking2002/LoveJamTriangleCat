@@ -2,6 +2,9 @@
 using System.Collections;
 
 public class CamController : MonoBehaviour {
+
+	public bool testing = false;
+
 	public Vector3 offset = new Vector3(10, 10, 0);
 	public Transform player;
 	public float moveDamp = 0.5f;
@@ -33,8 +36,16 @@ public class CamController : MonoBehaviour {
 
 	// Update is called once per frame
 	void LateUpdate () {	
-		var targetPos = new Vector3(Mathf.Clamp(player.position.x, limitDL.position.x, limitUR.position.x), Mathf.Clamp(player.position.y, limitDL.position.y, limitUR.position.y), transform.position.z) + offset;
-		transform.position = Vector3.SmoothDamp(transform.position, targetPos, ref moveVel, moveDamp);
+		if (testing)
+		{
+			var targetPos = new Vector3(player.position.x, player.position.y, transform.position.z) + offset;
+			transform.position = Vector3.SmoothDamp(transform.position, targetPos, ref moveVel, moveDamp);
+		}
+		else
+		{
+			var targetPos = new Vector3(Mathf.Clamp(player.position.x, limitDL.position.x, limitUR.position.x), Mathf.Clamp(player.position.y, limitDL.position.y, limitUR.position.y), transform.position.z) + offset;
+			transform.position = Vector3.SmoothDamp(transform.position, targetPos, ref moveVel, moveDamp);
+		}
 	}
 
     void Update() {

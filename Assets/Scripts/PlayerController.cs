@@ -42,11 +42,13 @@ public class PlayerController : MonoBehaviour {
 
 		rb = GetComponent<Rigidbody2D>();
 		animator = GetComponent<Animator>();
-		GameManager.CacheIcons(iconsDict, IconContainer);
 
 		if (!testing)
 		{
+			GameManager.CacheIcons(iconsDict, IconContainer);
+
 			CacheHiddenIconSprites();
+
 		}
 		//ObfuscateIcons();
 	}
@@ -59,7 +61,7 @@ public class PlayerController : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () 
 	{
-		if (canMove && !GameManager.Instance.IsInMenu())
+		if (GameManager.Instance.IsWalkingAround())
 		{
 			MovePlayer();
 		}

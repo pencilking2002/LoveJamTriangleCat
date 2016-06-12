@@ -51,7 +51,7 @@ public class PlayerController : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () 
 	{
-		if (canMove)
+		if (canMove && !GameManager.Instance.IsInMenu())
 		{
 			MovePlayer();
 		}

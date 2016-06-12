@@ -1,18 +1,18 @@
 fileFormatVersion: 2
 guid: 222a3deb437f543c5a050e126020dc6d
-timeCreated: 1465692727
+timeCreated: 1465696377
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: ui-assets_0
-    21300002: ui-assets_1
+    21300000: tile-selected
+    21300002: tile
     21300004: ui-assets_2
-    21300006: ui-assets_3
+    21300006: ui-bg
     21300008: ui-assets_4
-    21300010: ui-assets_5
-    21300012: ui-assets_6
-    21300014: ui-assets_7
-    21300016: ui-assets_8
+    21300010: heart-icon
+    21300012: star-icon
+    21300014: cat-icon
+    21300016: sun-icon
     21300018: ui-assets_9
     21300020: ui-assets_10
   serializedVersion: 2
@@ -61,7 +61,7 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: ui-assets_0
+    - name: tile-selected
       rect:
         serializedVersion: 2
         x: 11
@@ -79,7 +79,7 @@ TextureImporter:
         - {x: 53.5, y: -54.5}
         - {x: 54.5, y: -53.5}
         - {x: 54.5, y: 54.5}
-    - name: ui-assets_1
+    - name: tile
       rect:
         serializedVersion: 2
         x: 133
@@ -116,7 +116,7 @@ TextureImporter:
         - {x: 17.5, y: -7}
         - {x: 18.5, y: -2}
         - {x: 18.5, y: 17}
-    - name: ui-assets_3
+    - name: ui-bg
       rect:
         serializedVersion: 2
         x: 304
@@ -159,7 +159,7 @@ TextureImporter:
         - {x: 171, y: -57}
         - {x: 171, y: -28}
         - {x: 170, y: -18}
-    - name: ui-assets_5
+    - name: heart-icon
       rect:
         serializedVersion: 2
         x: 4
@@ -179,7 +179,7 @@ TextureImporter:
         - {x: 36, y: -11}
         - {x: 36, y: 24}
         - {x: 29, y: 34}
-    - name: ui-assets_6
+    - name: star-icon
       rect:
         serializedVersion: 2
         x: 92
@@ -198,7 +198,7 @@ TextureImporter:
         - {x: 40, y: -6}
         - {x: 40, y: 21}
         - {x: 16, y: 40}
-    - name: ui-assets_7
+    - name: cat-icon
       rect:
         serializedVersion: 2
         x: 182
@@ -216,7 +216,7 @@ TextureImporter:
         - {x: 35, y: -31}
         - {x: 37, y: -29}
         - {x: 37, y: 29}
-    - name: ui-assets_8
+    - name: sun-icon
       rect:
         serializedVersion: 2
         x: 271
